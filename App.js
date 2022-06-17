@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
 
 const style = StyleSheet.create({
   container: {
-    paddingTop: 10,
+    paddingTop: 40,
     paddingLeft: 120,
     paddingRight: 10,
     paddingBottom: 30,
@@ -35,6 +35,7 @@ const style = StyleSheet.create({
 
 const SectionListBasics = () => {
     return (
+      <View style={{ flex: 2, backgroundColor: 'skyblue' }}>
       <View style={styles.container}>
         <Text style={style.container}>Lista de livros</Text>
         <SectionList
@@ -72,6 +73,7 @@ const SectionListBasics = () => {
           renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
           keyExtractor={(item, index) => index}
         />
+      </View>
       </View>
     );
 }
